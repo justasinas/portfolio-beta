@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,6 +12,7 @@
 
 body {
   background-color: #040c18;
+  overflow-x: hidden;
 }
 
 header {
@@ -67,6 +72,25 @@ header .header__quote {
   margin-top: 30px;
 }
 
+header nav .hamburger {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  font-size: 25px;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav .turn {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,5 +109,175 @@ header nav ul li a {
   color: #fff;
   font-size: 20px;
   text-align: center;
+}
+
+main .main__about {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main__about .container {
+  width: 80%;
+  margin: auto;
+}
+
+main .main__about .container .main__about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .main__about .container .main__about-me h2 {
+  font-family: "Manrope", sans-serif;
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  background-clip: text;
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  width: 50%;
+}
+
+main .main__about .container .main__about-me p {
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  line-height: 30px;
+  width: 50%;
+}
+
+main .main__about .container .main__about-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 200px;
+}
+
+main .main__about .container .main__about-skills h2 {
+  font-family: "Manrope", sans-serif;
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  background-clip: text;
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  width: 30%;
+}
+
+main .main__about .container .main__about-skills .main__about-skills-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .main__about .container .main__about-skills .main__about-skills-images li {
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  text-align: center;
+  margin-right: 20px;
+}
+
+main .main__about .container .main__about-skills .main__about-skills-images li p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  line-height: 50px;
+  -webkit-box-align: middle;
+      -ms-flex-align: middle;
+          align-items: middle;
+}
+
+main .main__about .container .main__about-skills .main__about-skills-images li:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 700px) {
+  header h2 {
+    font-size: 50px;
+  }
+  header p {
+    font-size: 15px;
+  }
+  header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    background: #072649;
+  }
+  header nav .hamburger {
+    visibility: visible;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header nav li {
+    margin-top: 20px;
+  }
+  header nav .show_links {
+    z-index: 1;
+    height: 220px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    margin-top: 30px;
+  }
+  main .main__about .container .main__about-me h2 {
+    width: 100%;
+    text-align: center;
+  }
+  main .main__about .container .main__about-me p {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  main .main__about-skills h2 {
+    text-align: center;
+  }
+  main .main__about-skills .main__about-skills-images li {
+    width: 100%;
+    text-align: center;
+  }
+  main .main__about-skills .main__about-skills-images li:nth-last-child(1) {
+    margin-right: 0px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

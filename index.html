@@ -10,21 +10,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5599da2de4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h2>JUSTAS PRAŠUKAS</h2>
-        <p id="header__frontEnd-text"> </p>
+        <p id="header__frontEnd-text"></p>
         <p class="header__quote">one successful manager once said:</p>
         <p>“You miss 100% of the shots you don’t take – Wayne Gretzky – Michael Scott”</p>
         <nav>
-            <ul>
-                <li><a href="#">about me</a></li>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="link_list">
+                <li><a href="#aboutMe">about me</a></li>
                 <li><a href="#">portfolio</a></li>
                 <li><a href="#">contact me</a></a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="main__about">
+            <div class="container">
+                <div class="main__about-me" id="aboutMe">
+                    <h2>what about me?</h2>
+                    <p>My name is Justas i’m a 22 year old self tought
+                        web developer from Lithuania.
+                        I’m an entry level front-end programmer, my future 
+                        goal is to pick up full-stack, but always stay 
+                        more oriented towards front-end.
+                        Persistant, dedicated and very motivated person.
+                        Fan of kayaking and rowing.
+                    </p>
+                </div>
+                <div class="main__about-skills">
+                    <h2>skills</h2>
+                    <ul class="main__about-skills-images">
+                        <li><img src="images/html5.png" height="50px" width="60px" alt="html5"><p>HTML5</p></li>
+                        <li><img src="images/css.png" height="50px" width="50px" alt="css3"><p>CSS3</p></li>
+                        <li><img src="images/js.png" height="50px" width="50px" alt="javascript"><p>VANILLA JS</p></li>
+                        <li><img src="images/bootstrap.png" height="50px" width="60px" alt="bootstrap">
+                        <p>BOOTSTRAP</p></li>
+                        <li><img src="images/sassss.png" height="50px" width="70px" alt="sass"><p>SASS</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="js/app.js"></script>
 </body>
 </html>
