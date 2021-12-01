@@ -17,6 +17,11 @@ body {
     background-color: $bgColor;
     overflow-x: hidden;
 }
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    padding: 0;
+}
 header {
     display: flex;
     width: 100%;
@@ -83,15 +88,16 @@ header {
         }
     }
 }
+.container {
+    width: 80%;
+    margin: auto;
+}
 main {
     .main__about {
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
-        .container {
-            width: 80%;
-            margin: auto;
             .main__about-me {
                 display: flex;
                 flex-direction: row;
@@ -121,15 +127,13 @@ main {
                 justify-content: space-between;
                 flex-wrap: wrap;
                 margin-top: 200px;
-                h2 {
+                .main__about-skills-text {
                     font-family: $font-family;
                     background: $gradient-text;
                     background-clip: text;
-                    text-align: left;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-size: 40px;
-                    width: 30%;
                 }
                 .main__about-skills-images {
                     display: flex;
@@ -151,7 +155,46 @@ main {
                     }
                 }
             }
+    }
+    .main__portfolio {
+        height: 100%;
+        padding: 100px 0;
 
+        h2 {
+            text-align: center;
+            font-family: $font-family;
+            background: $gradient-text;
+            background-clip: text;
+            text-align: center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 60px;
+            margin-bottom: 50px;
+        }
+        .main__portfolio-boxes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+        .main__portfolio-box {
+            margin: 10px;
+            width: 300px;
+            background: $color-section;
+            -webkit-box-shadow: 0px 0px 8px 3px rgba(255,255,255,0.18); 
+            box-shadow: 0px 0px 8px 3px rgba(255,255,255,0.18);
+            .main__portfolio-box-image {
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                text-align: center;
+                color: #fff;
+                font-family: $font-secondary;
+                padding: 10px 0;
+            }
         }
     }
 }
@@ -160,13 +203,14 @@ main {
 @media only screen and (max-width: 700px){
     header {
         h2 {
+            width: 100%;
             font-size: 50px;
         }
         p {
             font-size: 15px;
         }
         nav {
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             width: 100%;
@@ -174,6 +218,7 @@ main {
             background: $color-section;
             .hamburger {
                 visibility: visible;
+                z-index: 99;
             }
             ul {
                 display: flex;
@@ -194,6 +239,7 @@ main {
     }
     main {
         .main__about {
+            height: auto;
             .container {
                 .main__about-me {
                     h2 {
@@ -209,10 +255,14 @@ main {
             }
         }
         .main__about-skills {
-            h2 {
+            .main__about-skills-text {
+                width: 100%;
                 text-align: center;
             }
             .main__about-skills-images {
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
                 li {
                     width: 100%;
                     text-align: center;

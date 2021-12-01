@@ -17,6 +17,17 @@ navToggle.addEventListener("click", function() {
     navToggle.classList.toggle("turn");
 });
 window.addEventListener("scroll", function () {
-    var navBar = document.querySelector("nav");
-    navBar.classList.toggle("sticky",window.scrollY >0);
+    document.querySelector('nav').classList.toggle("nav-fixed",window.scrollY >50);
 });
+/*window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      document.querySelector('nav').classList.add('fixed-top');
+      // add padding top to show content behind navbar
+      navbar_height = document.querySelector('nav').offsetHeight;
+      document.body.style.paddingTop = navbar_height + 'px';
+    } else {
+        document.querySelector('nav').classList.remove('fixed-top');
+       // remove padding top from body
+      document.body.style.paddingTop = '0';
+    } 
+});*/

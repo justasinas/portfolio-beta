@@ -15,6 +15,12 @@ body {
   overflow-x: hidden;
 }
 
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  padding: 0;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,6 +117,11 @@ header nav ul li a {
   text-align: center;
 }
 
+.container {
+  width: 80%;
+  margin: auto;
+}
+
 main .main__about {
   width: 100%;
   height: 100%;
@@ -122,12 +133,7 @@ main .main__about {
           align-items: center;
 }
 
-main .main__about .container {
-  width: 80%;
-  margin: auto;
-}
-
-main .main__about .container .main__about-me {
+main .main__about .main__about-me {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +148,7 @@ main .main__about .container .main__about-me {
       flex-wrap: wrap;
 }
 
-main .main__about .container .main__about-me h2 {
+main .main__about .main__about-me h2 {
   font-family: "Manrope", sans-serif;
   background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
   background-clip: text;
@@ -153,7 +159,7 @@ main .main__about .container .main__about-me h2 {
   width: 50%;
 }
 
-main .main__about .container .main__about-me p {
+main .main__about .main__about-me p {
   text-align: right;
   font-family: "Montserrat", sans-serif;
   color: #fff;
@@ -161,7 +167,7 @@ main .main__about .container .main__about-me p {
   width: 50%;
 }
 
-main .main__about .container .main__about-skills {
+main .main__about .main__about-skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,18 +183,16 @@ main .main__about .container .main__about-skills {
   margin-top: 200px;
 }
 
-main .main__about .container .main__about-skills h2 {
+main .main__about .main__about-skills .main__about-skills-text {
   font-family: "Manrope", sans-serif;
   background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
   background-clip: text;
-  text-align: left;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 40px;
-  width: 30%;
 }
 
-main .main__about .container .main__about-skills .main__about-skills-images {
+main .main__about .main__about-skills .main__about-skills-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,7 +200,7 @@ main .main__about .container .main__about-skills .main__about-skills-images {
       justify-content: space-around;
 }
 
-main .main__about .container .main__about-skills .main__about-skills-images li {
+main .main__about .main__about-skills .main__about-skills-images li {
   -webkit-box-align: right;
       -ms-flex-align: right;
           align-items: right;
@@ -204,7 +208,7 @@ main .main__about .container .main__about-skills .main__about-skills-images li {
   margin-right: 20px;
 }
 
-main .main__about .container .main__about-skills .main__about-skills-images li p {
+main .main__about .main__about-skills .main__about-skills-images li p {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   color: #fff;
@@ -214,20 +218,71 @@ main .main__about .container .main__about-skills .main__about-skills-images li p
           align-items: middle;
 }
 
-main .main__about .container .main__about-skills .main__about-skills-images li:nth-last-child(1) {
+main .main__about .main__about-skills .main__about-skills-images li:nth-last-child(1) {
   margin-right: 0px;
+}
+
+main .main__portfolio {
+  height: 100%;
+  padding: 100px 0;
+}
+
+main .main__portfolio h2 {
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  background-clip: text;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+main .main__portfolio .main__portfolio-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .main__portfolio .main__portfolio-box {
+  margin: 10px;
+  width: 300px;
+  background: #072649;
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.18);
+}
+
+main .main__portfolio .main__portfolio-box .main__portfolio-box-image img {
+  width: 100%;
+}
+
+main .main__portfolio .main__portfolio-box p {
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 0;
 }
 
 /* RESPONSIVE */
 @media only screen and (max-width: 700px) {
   header h2 {
+    width: 100%;
     font-size: 50px;
   }
   header p {
     font-size: 15px;
   }
   header nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -236,6 +291,7 @@ main .main__about .container .main__about-skills .main__about-skills-images li:n
   }
   header nav .hamburger {
     visibility: visible;
+    z-index: 99;
   }
   header nav ul {
     display: -webkit-box;
@@ -260,6 +316,9 @@ main .main__about .container .main__about-skills .main__about-skills-images li:n
     transition: 0.4s;
     margin-top: 30px;
   }
+  main .main__about {
+    height: auto;
+  }
   main .main__about .container .main__about-me h2 {
     width: 100%;
     text-align: center;
@@ -269,8 +328,17 @@ main .main__about .container .main__about-skills .main__about-skills-images li:n
     margin-top: 20px;
     width: 100%;
   }
-  main .main__about-skills h2 {
+  main .main__about-skills .main__about-skills-text {
+    width: 100%;
     text-align: center;
+  }
+  main .main__about-skills .main__about-skills-images {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   main .main__about-skills .main__about-skills-images li {
     width: 100%;
