@@ -26,7 +26,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -37,6 +38,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 header h2 {
@@ -123,6 +125,7 @@ header nav ul li a {
 }
 
 main .main__about {
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -218,13 +221,11 @@ main .main__about .main__about-skills .main__about-skills-images li p {
           align-items: middle;
 }
 
-main .main__about .main__about-skills .main__about-skills-images li:nth-last-child(1) {
-  margin-right: 0px;
-}
-
 main .main__portfolio {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding: 100px 0;
+  overflow: hidden;
 }
 
 main .main__portfolio h2 {
@@ -273,21 +274,6 @@ main .main__portfolio .main__portfolio-box p {
   padding: 10px 0;
 }
 
-/* Mouse Cursor */
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-transform: 0.1s;
-          transform: 0.1s;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  pointer-events: none;
-  mix-blend-mode: difference;
-}
-
 /* RESPONSIVE */
 @media only screen and (max-width: 700px) {
   header h2 {
@@ -333,6 +319,7 @@ main .main__portfolio .main__portfolio-box p {
     margin-top: 30px;
   }
   main .main__about {
+    min-height: 100vh;
     height: auto;
   }
   main .main__about .container .main__about-me h2 {
@@ -361,7 +348,8 @@ main .main__portfolio .main__portfolio-box p {
     text-align: center;
   }
   main .main__portfolio {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 100px 0;
   }
   main .main__portfolio h2 {

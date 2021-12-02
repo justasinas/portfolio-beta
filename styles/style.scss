@@ -25,10 +25,12 @@ body {
 header {
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
     h2 {
         font-family: $font-family;
         background: $gradient-text;
@@ -94,6 +96,7 @@ header {
 }
 main {
     .main__about {
+        overflow: hidden;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -150,16 +153,14 @@ main {
                            align-items: middle;
                        }
                     }
-                    li:nth-last-child(1) {
-                        margin-right: 0px;
-                    }
                 }
             }
     }
     .main__portfolio {
-        height: 100vh;
+        min-height: 100vh;
+        height: auto;
         padding: 100px 0;
-
+        overflow: hidden;
         h2 {
             text-align: center;
             font-family: $font-family;
@@ -197,18 +198,6 @@ main {
             }
         }
     }
-}
-/* Mouse Cursor */
-.cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #fff;
-    transform: 0.1s;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    mix-blend-mode: difference;
 }
 /* RESPONSIVE */
 @media only screen and (max-width: 700px){
@@ -250,6 +239,7 @@ main {
     }
     main {
         .main__about {
+            min-height: 100vh;
             height: auto;
             .container {
                 .main__about-me {
@@ -281,7 +271,8 @@ main {
             }
         }
         .main__portfolio {
-            height: 100vh;
+            min-height: 100vh;
+            height: auto;
             padding: 100px 0;
     
             h2 {
