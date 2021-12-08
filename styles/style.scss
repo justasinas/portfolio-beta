@@ -137,14 +137,17 @@ main {
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-size: 40px;
+                    text-align: center;
                 }
                 .main__about-skills-images {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
+
                     li {
                         align-items: right;
                         text-align: center;
                         margin-right: 20px;
+                        width: 100%;
                        p {
                            text-align: center;
                            font-family: $font-secondary;
@@ -177,17 +180,24 @@ main {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
-
         }
         .main__portfolio-box {
             margin: 30px;
-            width: 300px;
+            width: 280px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
             background: $color-section;
             -webkit-box-shadow: 0px 0px 8px 3px rgba(255,255,255,0.18); 
             box-shadow: 0px 0px 8px 3px rgba(255,255,255,0.18);
             .main__portfolio-box-image {
+                position: relative;
                 img {
                     width: 100%;
+                    opacity: 0.5;
+                }
+                #project_name {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             }
             p {
@@ -195,6 +205,27 @@ main {
                 color: #fff;
                 font-family: $font-secondary;
                 padding: 10px 0;
+            }
+            .main__portfolio-show {
+                display: flex;
+                justify-content: center;
+                #live {
+                    a{
+                        margin-right: 20px;
+                        text-decoration: none;
+                        color: #09CAEF;
+                        font-weight: 800;
+                        font-size: 14px;
+                    }
+                }
+                #git {
+                    a{
+                        text-decoration: none;
+                        color: #D2AA09;
+                        font-weight: 800;
+                        font-size: 14px;
+                    }
+                }
             }
         }
     }

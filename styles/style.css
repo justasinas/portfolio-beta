@@ -193,14 +193,16 @@ main .main__about .main__about-skills .main__about-skills-text {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 40px;
+  text-align: center;
 }
 
 main .main__about .main__about-skills .main__about-skills-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main .main__about .main__about-skills .main__about-skills-images li {
@@ -209,6 +211,7 @@ main .main__about .main__about-skills .main__about-skills-images li {
           align-items: right;
   text-align: center;
   margin-right: 20px;
+  width: 100%;
 }
 
 main .main__about .main__about-skills .main__about-skills-images li p {
@@ -257,14 +260,27 @@ main .main__portfolio .main__portfolio-boxes {
 
 main .main__portfolio .main__portfolio-box {
   margin: 30px;
-  width: 300px;
+  width: 280px;
   background: #072649;
   -webkit-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.18);
   box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.18);
 }
 
+main .main__portfolio .main__portfolio-box .main__portfolio-box-image {
+  position: relative;
+}
+
 main .main__portfolio .main__portfolio-box .main__portfolio-box-image img {
   width: 100%;
+  opacity: 0.5;
+}
+
+main .main__portfolio .main__portfolio-box .main__portfolio-box-image #project_name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 main .main__portfolio .main__portfolio-box p {
@@ -272,6 +288,30 @@ main .main__portfolio .main__portfolio-box p {
   color: #fff;
   font-family: "Montserrat", sans-serif;
   padding: 10px 0;
+}
+
+main .main__portfolio .main__portfolio-box .main__portfolio-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .main__portfolio .main__portfolio-box .main__portfolio-show #live a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #09CAEF;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+main .main__portfolio .main__portfolio-box .main__portfolio-show #git a {
+  text-decoration: none;
+  color: #D2AA09;
+  font-weight: 800;
+  font-size: 14px;
 }
 
 /* RESPONSIVE */
