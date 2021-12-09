@@ -41,6 +41,19 @@ header {
   overflow: hidden;
 }
 
+header .header__contact {
+  margin-top: 20px;
+}
+
+header .header__contact a {
+  padding: 5px;
+}
+
+header .header__contact a i {
+  color: #81AFDD;
+  font-size: 25px;
+}
+
 header h2 {
   font-family: "Manrope", sans-serif;
   background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
@@ -353,7 +366,7 @@ main .main__portfolio .main__portfolio-box .main__portfolio-show #git a {
   }
   header nav .show_links {
     z-index: 1;
-    height: 220px;
+    height: 150px;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     margin-top: 30px;
@@ -394,6 +407,12 @@ main .main__portfolio .main__portfolio-box .main__portfolio-show #git a {
   }
   main .main__portfolio h2 {
     font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .container {
+    width: 1800px;
   }
 }
 /*# sourceMappingURL=style.css.map */
